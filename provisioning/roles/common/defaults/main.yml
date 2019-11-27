@@ -1,0 +1,11 @@
+---
+# defaults file for common
+common_default_debian_reqs:
+  - unzip
+common_default_redhat_reqs:
+  - unzip
+  - tar
+  - socat
+  - traceroute
+  - mtr
+  - tcpdump

@@ -1,0 +1,28 @@
+---
+# [WARNING]: Could not find aptitude. Using apt-get instead fix
+- name: "APT: Install aptitude package"
+  apt:
+   name: aptitude
+   force_apt_get: yes
+- name: "Install required packages before installing openvas"
+  package:
+    name: "{{ openvas_debian_pre_reqs }}"
+    state: present
+- name: "Run openvas-setup"
+  shell: openvas-setup chdir=/tmp >> /tmp/openvas-setup.out
+  args:
+    chdir: /tmp/openvas-setup.out
+    creates: openvas-setup.out
+# change the 127.0.0.1 to 0.0.0.0, this allows remote hosts to connect to IP address (or hostname)
+- name: "Modify gsad to listen on all interfaces"
+  template:
+      src: greenbone-security-assistant.service.j2
+      dest: /lib/systemd/system/greenbone-security-assistant.service
+      owner: root
+      group: root
+      mode: 0644
+- name: "Restart service in all cases, also issue daemon-reload to pick up config changes"
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: greenbone-security-assistant

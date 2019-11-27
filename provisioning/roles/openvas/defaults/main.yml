@@ -1,0 +1,4 @@
+---
+# defaults file for common
+openvas_debian_pre_reqs:
+  - openvas
