@@ -1,13 +1,6 @@
 ---
-# handlers file for common
-- name: restart snort
-  service:
-    name: snort
-    state: restarted
-  become: true
+- name: restart redis
+  service: name=redis-server state=restarted
 
-- name: restart snortd
-  service:
-    name: snortd
-    state: restarted
-  become: true
+- name: reload openvas
+  service: name=redis-server state=reloaded

@@ -1,6 +1,11 @@
 # openvas-sandbox
 
 ~~~~
+>vagrant init --template scripts/Vagrantfile.erb
+>vagrant up "vg-openvas-01"
+
+~~~~
+~~~~
 Login with admin and the password in the script output
 
 total size is 63,121,109  speedup is 1.00
