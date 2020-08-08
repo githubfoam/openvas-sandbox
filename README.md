@@ -67,9 +67,6 @@ Starting OpenVas Services
 
 ~~~~
 ~~~~
-<https://github.com/greenbone/openvas>
-~~~~
-~~~~
 Web UI
 Menu - Configuration - Targets
 Menu - Scans - Tasks
@@ -81,4 +78,8 @@ Network Targets
     IPv4 address range in long format: 192.168.200.100-192.168.200.110
     IPv4 address range in CIDR notation: 192.168.100.0/24
 
+~~~~
+
+~~~~
+https://github.com/greenbone/openvas
 ~~~~

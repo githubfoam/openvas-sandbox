@@ -1,16 +1,16 @@
 ---
 - vagrant_box_host: "vg-openvas-01"
-  # vagrant_box: "bento/ubuntu-16.04"
-  vagrant_box: "bento/ubuntu-19.04"
+  vagrant_box: "bento/ubuntu-19.10"
   vbox_name: "vbox-openvas-01"
-  vbox_ram: 8192
+  vbox_ram: 1024
   vbox_cpu: 4
   network_type: "private_network"
   vagrant_box_ip: 192.168.22.12
   guest_port: 9392
   host_port: 9392
   server_bootstrap: "provisioning/deploy.yml"
-  ansible_version: "2.9.1"
+  shell_provision: "provisioning/bootstrap.sh"  
+  # ansible_version: "2.9.1"
   ansible_compatibility_mode: "2.0"
 
 - vagrant_box_host: "vg-openvas-02"
@@ -23,5 +23,6 @@
   guest_port: 1234
   host_port: 1234
   server_bootstrap: "provisioning/deploy.yml"
-  ansible_version: "2.9.1"
+  shell_provision: "provisioning/bootstrap.sh"  
+  # ansible_version: "2.9.1"
   ansible_compatibility_mode: "2.0"
