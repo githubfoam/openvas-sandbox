@@ -1,5 +1,8 @@
 # openvas-sandbox
 
+Travis (.com) branch:
+[![Build Status](https://travis-ci.com/githubfoam/openvas-sandbox.svg?branch=master)](https://travis-ci.com/githubfoam/openvas-sandbox) 
+
 ~~~~
 >vagrant init --template scripts/Vagrantfile.erb
 >vagrant up "vg-openvas-01"
