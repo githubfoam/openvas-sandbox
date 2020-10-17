@@ -14,5 +14,5 @@
 #   include_tasks: openvas_redhat.yml
 #   when: " ansible_os_family == 'RedHat' and ansible_distribution in ['CentOS','Scientific'] "
 
-- name: "preinstall task"
-  include_tasks: pre_install.yml
+# - name: "preinstall task"
+#   include_tasks: pre_install.yml
