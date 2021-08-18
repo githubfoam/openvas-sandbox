@@ -1,5 +1,0 @@
----
-# vars file for common
-snort_version: 2.9.15
-daq_version: 2.0.6
-luajit_version: 2.0.5
