@@ -25,3 +25,30 @@
   roles:
     - common
     - openvas
+
+- name: "deploy openvas on kali linux"
+  gather_facts: true
+  hosts:  vg-kali-02
+  become: yes
+  # vars:
+  #   add_host_entries: true
+  #   add_resolv_entries: true
+  # pre_tasks:
+  # - name: "Setting hostname"
+  #   shell: "hostnamectl set-hostname {{ inventory_hostname }}"
+  roles:
+    - common
+
+
+- name: "deploy openvas on kali linux"
+  gather_facts: true
+  hosts:  vg-kali-03
+  become: yes
+  # vars:
+  #   add_host_entries: true
+  #   add_resolv_entries: true
+  # pre_tasks:
+  # - name: "Setting hostname"
+  #   shell: "hostnamectl set-hostname {{ inventory_hostname }}"
+  roles:
+    - common

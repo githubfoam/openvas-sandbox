@@ -3,6 +3,29 @@
 Travis (.com) branch:
 [![Build Status](https://travis-ci.com/githubfoam/openvas-sandbox.svg?branch=master)](https://travis-ci.com/githubfoam/openvas-sandbox) 
 
+
+~~~~
+Deploy openVAS on kali linux
+
+>vagrant init --template scripts/Vagrantfile.erb
+>vagrant up vg-kali-02
+>vagrant ssh vg-kali-02
+
+
+apt-get update -y
+apt-get upgrade -y
+apt-get install -yq gvm
+gvm-setup
+gvm-start
+
+browse the local host 
+“https://127.0.0.1:9392”
+
+>vagrant destroy -f vg-kali-02
+>del Vagrantfile
+
+~~~~
+
 ~~~~
 >vagrant init --template scripts/Vagrantfile.erb
 >vagrant up "vg-openvas-01"
